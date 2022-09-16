@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Name_Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="NAME"
+        android:textStyle="bold"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:textSize="20dp"
+        />
+    <EditText
+        android:id="@+id/Name_In"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:inputType="textPersonName"
+        android:textSize="20dp"
+        android:layout_below="@+id/Name_Text"
+
+        />
+    <TextView
+        android:id="@+id/Country_Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="COUNTRY"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:textSize="20dp"
+        android:layout_below="@+id/Name_In"
+
+        />
+
+    <EditText
+        android:id="@+id/Country_In"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Country_Text"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:inputType="text"
+        android:textSize="20dp"
+
+        />
+    <TextView
+        android:id="@+id/Email_Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="E-MAIL"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:textSize="20dp"
+        android:layout_below="@+id/Country_In"
+
+        />
+    <EditText
+        android:id="@+id/Email_In"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:inputType="textEmailAddress"
+        android:textSize="20dp"
+        android:layout_below="@+id/Email_Text"
+
+        />
+
+    <Button
+        android:id="@+id/reg_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Email_In"
+        android:textStyle="bold"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="50dp"
+        android:text="Register" />
+
+</RelativeLayout>
