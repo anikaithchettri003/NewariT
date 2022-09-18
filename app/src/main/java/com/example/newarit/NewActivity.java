@@ -3,6 +3,9 @@ package com.example.newarit;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.widget.Button;
+import android.widget.EditText;
 
 public class NewActivity extends AppCompatActivity {
 
