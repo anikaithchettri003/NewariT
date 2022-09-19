@@ -1,12 +1,14 @@
 package com.example.newarit;
-import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import java.io.FileNotFoundException;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -31,33 +33,50 @@ public class MainActivity extends AppCompatActivity {
         String email = Email_In.getText().toString();
         FileOutputStream fos = null ;
 
-        try {
-            fos = openFileOutput(FILE_NAME,MODE_PRIVATE);
-            fos.write(name.getBytes(StandardCharsets.UTF_8));
-            fos.write(country.getBytes(StandardCharsets.UTF_8));
-            fos.write(email.getBytes(StandardCharsets.UTF_8));
-            Name_In.getText().clear();
-            Country_In.getText().clear();
-            Email_In.getText().clear();
 
-            Toast.makeText(MainActivity.this,"Saved to" + getFilesDir() + "/"+FILE_NAME, Toast.LENGTH_LONG
-            ).show();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }finally {
-            if (fos != null){
-                try {
-                    fos.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
+
+            try {
+                if(!name.equals("") && !country.equals("") && !email.equals("")) {
+                    fos = openFileOutput(FILE_NAME, MODE_PRIVATE);
+                    fos.write(name.getBytes(StandardCharsets.UTF_8));
+                    fos.write(country.getBytes(StandardCharsets.UTF_8));
+                    fos.write(email.getBytes(StandardCharsets.UTF_8));
+                    Name_In.getText().clear();
+                    Country_In.getText().clear();
+                    Email_In.getText().clear();
+                    setContentView(R.layout.activity_new);
+                    Toast.makeText(MainActivity.this, "Saved to" + getFilesDir() + "/" + FILE_NAME, Toast.LENGTH_SHORT).show();
+                    tip_msg(name);
+
+
+
+
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                if (fos != null){
+                    try {
+                        fos.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
-        }
+    }
+    private void tip_msg(String message){
+        AlertDialog dig = new AlertDialog.Builder(MainActivity.this)
+                .setTitle("Tip of the Day")
+                .setMessage(message)
+                .setNegativeButton("OK", (dialogInterface, i) -> {
+                    Intent act = new Intent(getApplicationContext(), NewActivity.class);
+                    startActivity(act);
+
+                }).create();
+
+        dig.show();
 
     }
-
 
 
 }
