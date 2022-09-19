@@ -3,8 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/NewariT/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/NewariT/app/src/main/res/drawable/btn_custom.xml" value="0.125" />
+        <entry key="..\:/NewariT/app/src/main/res/drawable/et_custom.xml" value="0.125" />
+        <entry key="..\:/NewariT/app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="..\:/NewariT/app/src/main/res/layout/activity_main.xml" value="0.24739583333333334" />
         <entry key="..\:/NewariT/app/src/main/res/layout/activity_new.xml" value="0.1" />
+        <entry key="..\:/NewariT/app/src/main/res/layout/activity_register.xml" value="0.1" />
+        <entry key="..\:/NewariT/app/src/main/res/layout/activity_sign_up.xml" value="0.23324275362318841" />
         <entry key="..\:/Users/anika/AndroidStudioProjects/NewariT/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/anika/AndroidStudioProjects/NewariT/app/src/main/res/layout/activity_new.xml" value="0.1" />
       </map>
