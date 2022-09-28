@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                     tip_msg(tips_arr[rnum]);
 
                 }else {
-                    Toast.makeText(getApplicationContext(),"Enter a Valid Details",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Enter Valid Details",Toast.LENGTH_SHORT).show();
                 }
             } catch (IOException e) {
                 e.printStackTrace();
