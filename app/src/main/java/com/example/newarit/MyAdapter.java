@@ -58,7 +58,7 @@ public class MyAdapter extends PagerAdapter {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, title+"\n"+description+"\n"+date, Toast.LENGTH_SHORT).show();
+
             }
         });
 

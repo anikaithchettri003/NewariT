@@ -18,8 +18,13 @@ import java.nio.charset.StandardCharsets;
 public class MainActivity extends AppCompatActivity {
     EditText Name_In,Country_In,Email_In;
     private static final String FILE_NAME = "data.csv";
-    private String[] tips_arr = {"Hello/General greeting -> Jojolopa","Thank You -> Subha","Welcome -> lasakusa","Yes -> Kha","No ->Makhu", "Warm Wishes ->Bhintuna"
-            ,"Have? -> Du?"} ;
+    private String[] tips_arr = {"Hello/General greeting -> Jojolopa",
+            "Thank You -> Subha",
+            "Welcome -> lasakusa",
+            "Yes -> Kha",
+            "No ->Makhu",
+            "Warm Wishes ->Bhintuna",
+            "Have? -> Du?"} ;
     Button reg_bnt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
